@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.tmc.project</groupId>
+	<artifactId>ascend-template</artifactId>
+	<version>1.0.RELEASE</version>
+	<packaging>jar</packaging>
+    
+    <distributionManagement>
+         <repository>
+             <id>maven-releases</id>
+             <name>maven-releases</name>
+             <url>http://10.100.102.21:8080/repository/maven-releases/</url>
+         </repository>
+     </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <includeEmptyDirs>true</includeEmptyDirs>
+                    <addDefaultExcludes>false</addDefaultExcludes>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
+
