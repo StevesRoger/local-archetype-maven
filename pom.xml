@@ -6,17 +6,24 @@
 	<groupId>com.tmc.project</groupId>
 	<artifactId>ascend-template</artifactId>
 	<version>1.0.RELEASE</version>
-	<packaging>jar</packaging>
+	<packaging>maven-archetype</packaging>
     
     <distributionManagement>
          <repository>
-             <id>maven-releases</id>
-             <name>maven-releases</name>
-             <url>http://10.100.102.21:8080/repository/maven-releases/</url>
+             <id>archetype</id>
+             <name>archetype</name>
+             <url>http://10.100.102.21:8080/repository/archetype/</url>
          </repository>
      </distributionManagement>
 
     <build>
+       <extensions>
+          <extension>
+            <groupId>org.apache.maven.archetype</groupId>
+            <artifactId>archetype-packaging</artifactId>
+            <version>3.1.0</version>
+          </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -27,7 +34,11 @@
                     <addDefaultExcludes>false</addDefaultExcludes>
                 </configuration>
             </plugin>
-
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-archetype-plugin</artifactId>
+              <version>3.1.0</version>
+            </plugin>
         </plugins>
     </build>
 

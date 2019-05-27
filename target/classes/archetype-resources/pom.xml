@@ -8,8 +8,8 @@
 	<version>${version}</version>
 	<packaging>jar</packaging>
     
-    <name>${classNamePrefix}</name>
-    <description>${classNamePrefix} project</description>
+    <name>${name}</name>
+    <description>${name} project</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
